@@ -1,12 +1,24 @@
 input.onButtonPressed(Button.A, function () {
-    if (heroes > villains) {
-    	
-    } else if (false) {
-    	
+    a = heroes_rate[randint(0, 4)]
+    basic.showString("" + (a))
+})
+input.onButtonPressed(Button.AB, function () {
+    if (a > b) {
+        basic.showString("" + (a))
+        basic.showString("Hero Win")
+    } else if (a < b) {
+        basic.showString("" + (b))
+        basic.showString("Villain Win")
     }
 })
-let villains = 0
-let heroes: number[] = []
+input.onButtonPressed(Button.B, function () {
+    b = villains_rate[randint(0, 4)]
+    basic.showString("" + (b))
+})
+let b = 0
+let a = 0
+let villains_rate: number[] = []
+let heroes_rate: number[] = []
 let superheroes = [
 "Spider Man",
 "Captain Marvel",
@@ -14,7 +26,7 @@ let superheroes = [
 "Batman",
 "Thor"
 ]
-heroes = [
+heroes_rate = [
 6,
 5,
 4,
@@ -28,10 +40,10 @@ let supervillains = [
 "Venom",
 "Dr Doom"
 ]
-villains = [
+villains_rate = [
 10,
 9,
-8,
+5,
 5,
 4
 ]
